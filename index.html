@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abraham de León</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+  
+    @keyframes blink-caret {
+      0%, 100% { border-right-color: transparent; }
+      50% { border-right-color: white; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .typewriter h1 {
+      overflow: hidden;
+      border-right: .15em solid transparent;
+      white-space: nowrap;
+      max-width: 100%;
+      margin: auto;
+      font-size: calc(10px + 2vw);
+      animation: typing 2.5s steps(40, end) forwards, blink-caret 500ms step-end infinite;
+    }
+    img {
+      max-width: 200px;
+      max-height: 200px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+    .parallax {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .hover-underline-animation {
+      display: inline-block;
+      position: relative;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+    .hover-underline-animation::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #FFFFFF;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    .hover-underline-animation:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    body, html {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        background: #1a202c;
+    }
+    .card {
+        background: #2d3748;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .card img {
+        padding-top: 2%;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        margin: auto;
+    }
+    .card h3 {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+        padding: 0 1rem;
+    }
+    .card p {
+        font-size: 1rem;
+        padding: 0 1rem 1rem;
+        opacity: 0.7;
+    }
+    .icon {
+        color: #cbd5e0;
+        margin-right: 12px;
+        font-size: 20px;
+    }
+    .icon img {
+        height: 20px;
+    }
+    .flex-container {
+        margin-top: 2%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .button {
+        background-color: #4a5568;
+        color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+    .button:hover {
+        background-color: #2b6cb0;
+    }
+    .button i {
+        margin-right: 8px;
+    }
+</style>
+<script>
+    setTimeout(() => {
+      const typewriterElement = document.querySelector('.typewriter h1');
+      typewriterElement.style.animation = 'typing 2.5s steps(40, end) forwards';
+    }, 2000);
+</script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-roboto">
+<nav class="fixed top-0 left-0 h-full bg-gray-800 p-4 z-20">
+  <ul class="space-y-6">
+    <li><a href="#inicio" class="hover:text-gray-300">Home</a></li>
+    <li><a href="#sobre-mi" class="hover:text-gray-300">About me</a></li>
+    <li><a href="#proyectos" class="hover:text-gray-300">Projects</a></li>
+    <li><a href="#contacto" class="hover:text-gray-300">Contact</a></li>
+    <li><a href="https://github.com/Hamibubu" target="_blank" class="icon"><i class="fab fa-github"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/abdlg/" target="_blank" class="icon"><i class="fab fa-linkedin-in"></i></a></li>
+    <li><a href="https://app.hackthebox.com/users/991911" target="_blank" class="icon"><img src="https://resources.hackthebox.com/hubfs/HTB-Logo-1.png"></a></li>
+  </ul>
+</nav>
+<main class="pl-24 pt-16">
+  <section id="inicio" class="text-center p-12 bg-black bg-opacity-90" style="background-image: url('tu-imagen-de-fondo.jpg');">
+    <div class="typewriter">
+      <h1 class="text-gray-100">&lt;script&gt;alert('Abraham de León Gutiérrez');&lt;/script&gt;</h1>
+    </div>
+    <p class="text-gray-300 mt-3">Ethical hacking, web and binary pentesting, cloud security and a little bit of music.</p>
+  </section>
+  <section id="sobre-mi" class="container mx-auto text-center p-8">
+    <h3 class="text-3xl font-bold">About Me</h3>
+    <p class="text-gray-300 mt-4">Cybersecurity engineer at ITESO university. Specialist in pentesting techniques and Red Teaming to ethically identify and exploit vulnerabilities. Also with some experience on defensive security, with the goal of helping humanity protecting their privacy and their rights to express themselves. Currently with two certifications EJPTv2 and ISC2's CC, currently seeking an OSCP.</p>
+    <div class="flex-container">
+        <img src="https://d9hhrg4mnvzow.cloudfront.net/info.ine.com/ejpt/53aa9bf6-ejpt-lp-background-dropshadow_107a06107a05w000002000.png" alt="Skill Image">
+        <img src="https://images.credly.com/images/2030e43f-8003-4d4b-9630-847add403c87/image.png" alt="Skill Image">
+        <img src="https://oci02.img.iteso.mx/Identidades-De-Instancia/ITESO/Logos%20ITESO/Logo-ITESO-Vertical-SinFondo.png" alt="Skill Image">
+    </div>
+</section>
+  <section id="proyectos" class="bg-gray-800 py-12">
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div class="card">
+        <img src="xp.png" alt="Project Image">
+        <h3>XPATHi</h3>
+        <p>XPATH Injection Tester tool designed to test and exploit XPath injection vulnerabilities in web applications. This tool allows users to systematically identify and exploit weaknesses with use of trees in XPath queries that applications use to interact with their XML data stores.</p>
+      </div>
+      <div class="card">
+        <img src="sql.png" alt="Project Image">
+        <h3>SQLi.py</h3>
+        <p>SQLi.py is a Python script designed for automating Time-Based Blind SQL Injection attacks.</p>
+      </div>
+      <div class="card">
+        <img src="ld.png" alt="Project Image">
+        <h3>LDAPi</h3>
+        <p>LDAPi is a sophisticated tool designed to exploit LDAP injection vulnerabilities. With a focus on simplicity and efficiency, it offers a powerful mechanism to extract data through LDAP injection techniques, enabling users to retrieve comprehensive data sets from vulnerable systems. Its utilization of trees for data sorting and searching ensures a fast and effective approach.</p>
+      </div>
+      <div class="card">
+        <img src="cyb.png" alt="Project Image">
+        <h3>Cybermusik</h3>
+        <p>Cybermusik is a web application that enables users an artists to have a connection, implementing album rating, forums and commentaries.</p>
+      </div>
+      <div class="card">
+        <img src="han.png" alt="Project Image">
+        <h3>Hanoi ASM</h3>
+        <p>Implementation of the hanoi towers algorithm on RISC V asswmbly.</p>
+      </div>
+      <div class="card">
+        <img src="scaj.png" alt="Project Image">
+        <h3>Portscanner with services and threads</h3>
+        <p>Java Implementation of a portscanner with usage of threads and with service scanning.</p>
+      </div>
+      <div class="card">
+        <img src="nms.png" alt="Project Image">
+        <h3>AutoNMS</h3>
+        <p>Network manager system in python for automation.</p>
+      </div>
+      <div class="card">
+        <img src="nets.png" alt="Project Image">
+        <h3>Bash VLSM netscanner</h3>
+        <p>This Bash script serves as a network scanner for local networks, utilizing Variable Length Subnet Masking (VLSM).</p>
+      </div>
+      <div class="card">
+        <img src="pepe.png" alt="Project Image">
+        <h3>Pepe Wallet</h3>
+        <p>Web application for managing wallets, with integration with AWS services such as KMS and DynamoDB for enhanced security.</p>
+      </div>
+      <div class="card">
+        <img src="cov.png" alt="Project Image">
+        <h3>Covid Simulator</h3>
+        <p>Covid infection simulator on C with pointers.</p>
+      </div>
+      <div class="card">
+        <img src="spa.png" alt="Project Image">
+        <h3>Space Invaders</h3>
+        <p>Space invaders game in python with Pygame.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Project Image">
+        <h3>And MORE!</h3>
+        <p>More projects on my github.</p>
+      </div>
+    </div>
+  </section>
+  <section id="contacto" class="text-center py-8">
+    <h3 class="text-3xl font-bold">Contact Me</h3>
+    <p class="text-gray-300 mt-3">Interested in collaborating or learning more? Download my CV or follow my social media.</p>
+    <br>
+    <a href="cv_abraham.pdf" class="button" download>
+      <i class="fas fa-download"></i>Download CV
+    </a>
+  </section>
+</main>
+<footer class="bg-gray-800 text-center p-4 mt-8">
+  © 2024 Abraham de León. All rights reserved.
+</footer>
+</body>
+</html>
